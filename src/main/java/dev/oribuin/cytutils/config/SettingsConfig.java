@@ -31,6 +31,7 @@ public final class SettingsConfig implements SettingHolder {
             )
             .tab("client")
             .comment("Should we prevent you from dropping your tools?")
+            .hidden(true)
             .input(new CheckBoxInput<>()));
 
     public static final Setting<Boolean> NORMAL_HEADS = create(SettingBuilder.of(
@@ -51,77 +52,148 @@ public final class SettingsConfig implements SettingHolder {
             .input(new CheckBoxInput<>()));
 
     public static final Setting<Color> FISH_BRONZE = create(SettingBuilder.of(
-                    "fish_bronze", Util.HEX_COLOR_CODEC, decode("#d9941d", 178)
+                    "fish-bronze", Util.HEX_COLOR_CODEC, decode("#d9941d", 178)
             )
             .tab("client")
             .section("pyrofishing")
             .input(new ColorInput<>(true)));
 
     public static final Setting<Color> FISH_SILVER = create(SettingBuilder.of(
-                    "fish_silver", Util.HEX_COLOR_CODEC, decode("#555555", 178)
+                    "fish-silver", Util.HEX_COLOR_CODEC, decode("#555555", 178)
             )
             .tab("client")
             .section("pyrofishing")
             .input(new ColorInput<>(true)));
 
     public static final Setting<Color> FISH_GOLD = create(SettingBuilder.of(
-                    "fish_gold", Util.HEX_COLOR_CODEC, decode("#fcdb2b", 178)
+                    "fish-gold", Util.HEX_COLOR_CODEC, decode("#fcdb2b", 178)
             )
             .tab("client")
             .section("pyrofishing")
             .input(new ColorInput<>(true)));
 
     public static final Setting<Color> FISH_DIAMOND = create(SettingBuilder.of(
-                    "fish_diamond", Util.HEX_COLOR_CODEC, decode("#18cde4", 178)
+                    "fish-diamond", Util.HEX_COLOR_CODEC, decode("#18cde4", 178)
             )
             .tab("client")
             .section("pyrofishing")
             .input(new ColorInput<>(true)));
 
     public static final Setting<Color> FISH_PLATINUM = create(SettingBuilder.of(
-                    "fish_platinum", Util.HEX_COLOR_CODEC, decode("#9b85b0", 178)
+                    "fish-platinum", Util.HEX_COLOR_CODEC, decode("#9b85b0", 178)
             )
             .tab("client")
             .section("pyrofishing")
             .input(new ColorInput<>(true)));
 
     public static final Setting<Color> FISH_MYTHIC = create(SettingBuilder.of(
-                    "fish_mythic", Util.HEX_COLOR_CODEC, decode("#c949ff", 178)
+                    "fish-mythic", Util.HEX_COLOR_CODEC, decode("#c949ff", 178)
             )
             .tab("client")
             .section("pyrofishing")
             .input(new ColorInput<>(true)));
 
     public static final Setting<Color> FISH_AUGMENT = create(SettingBuilder.of(
-                    "fish_augment", Util.HEX_COLOR_CODEC, decode("#83c9d4", 178)
+                    "fish-augment", Util.HEX_COLOR_CODEC, decode("#83c9d4", 178)
             )
             .tab("client")
             .section("pyrofishing")
             .input(new ColorInput<>(true)));
 
     public static final Setting<Color> FISH_CRAB = create(SettingBuilder.of(
-                    "fish_crab", Util.HEX_COLOR_CODEC, decode("#cf2d2d", 178)
+                    "fish-crab", Util.HEX_COLOR_CODEC, decode("#cf2d2d", 178)
             )
             .tab("client")
             .section("pyrofishing")
             .input(new ColorInput<>(true)));
 
     public static final Setting<Color> FISH_SQUID = create(SettingBuilder.of(
-                    "fish_squid", Util.HEX_COLOR_CODEC, decode("#5460d1", 178)
+                    "fish-squid", Util.HEX_COLOR_CODEC, decode("#5460d1", 178)
             )
             .tab("client")
             .section("pyrofishing")
             .input(new ColorInput<>(true)));
 
     public static final Setting<Color> FISH_DOLPHIN = create(SettingBuilder.of(
-                    "fish_dolphin", Util.HEX_COLOR_CODEC, decode("#5460d1", 178)
+                    "fish-dolphin", Util.HEX_COLOR_CODEC, decode("#5460d1", 178)
             )
             .tab("client")
             .section("pyrofishing")
             .input(new ColorInput<>(true)));
-
-
     // endregion
+
+    // region Wizard Colours
+    public static final Setting<Color> WIZARD_COIN_FRAGMENT = create(SettingBuilder.of(
+                    "wizard-coin-fragment", Util.HEX_COLOR_CODEC, decode("#BF69FF", 178)
+            )
+            .tab("client")
+            .section("wizard")
+            .input(new ColorInput<>(true)));
+
+    public static final Setting<Color> WIZARD_COIN = create(SettingBuilder.of(
+                    "wizard-coin", Util.HEX_COLOR_CODEC, decode("#BF69FF", 178)
+            )
+            .tab("client")
+            .section("wizard")
+            .input(new ColorInput<>(true)));
+
+    public static final Setting<Color> WIZARD_ENCHANTED_COIN = create(SettingBuilder.of(
+                    "wizard-enchanted-coin", Util.HEX_COLOR_CODEC, decode("#BF69FF", 178)
+            )
+            .tab("client")
+            .section("wizard")
+            .input(new ColorInput<>(true)));
+
+    public static final Setting<Color> WIZARD_BROKEN_BOOK = create(SettingBuilder.of(
+                    "wizard-broken-book", Util.HEX_COLOR_CODEC, decode("#BF69FF", 178)
+            )
+            .tab("client")
+            .section("wizard")
+            .input(new ColorInput<>(true)));
+    // endregion
+
+    // region Relics Section
+    public static final Setting<Color> RELICS_EGYPTIAN = create(SettingBuilder.of(
+                    "relics-egyptian", Util.HEX_COLOR_CODEC, decode("#ded664", 178)
+            )
+            .tab("client")
+            .section("relics")
+            .input(new ColorInput<>(true)));
+    
+    public static final Setting<Color> RELICS_FOSSIL = create(SettingBuilder.of(
+                    "relics-fossil", Util.HEX_COLOR_CODEC, decode("#79663F", 178)
+            )
+            .tab("client")
+            .section("relics")
+            .input(new ColorInput<>(true)));
+    
+    public static final Setting<Color> RELICS_GEMS = create(SettingBuilder.of(
+                    "relics-gems", Util.HEX_COLOR_CODEC, decode("#6ab1c4", 178)
+            )
+            .tab("client")
+            .section("relics")
+            .input(new ColorInput<>(true)));
+    
+    public static final Setting<Color> RELICS_INSECT = create(SettingBuilder.of(
+                    "relics-mango", Util.HEX_COLOR_CODEC, decode("#bee8b0", 178)
+            )
+            .tab("client")
+            .section("relics")
+            .input(new ColorInput<>(true)));
+
+    public static final Setting<Color> RELICS_MANGO = create(SettingBuilder.of(
+                    "relics-mango", Util.HEX_COLOR_CODEC, decode("#e69757", 178)
+            )
+            .tab("client")
+            .section("relics")
+            .input(new ColorInput<>(true)));
+    
+    public static final Setting<Color> RELICS_UFO = create(SettingBuilder.of(
+                    "relics-ufo", Util.HEX_COLOR_CODEC, decode("#5a8540", 178)
+            )
+            .tab("client")
+            .section("relics")
+            .input(new ColorInput<>(true)));
 
     /**
      * Decode a color with an assigned opacity

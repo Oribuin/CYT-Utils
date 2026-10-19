@@ -2,6 +2,7 @@ package dev.oribuin.cytutils.mixin;
 
 import dev.oribuin.cytutils.config.SettingsConfig;
 import dev.oribuin.cytutils.item.ItemType;
+import jdk.jfr.SettingControl;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -23,13 +24,13 @@ public class InventorySlotMixin extends Screen {
     }
 
     /**
-     * Draw an item inside an item with a specified opacity if an heirloom was found
+     * Draw an item inside an item with a specified opacity if a cyt item was found
      *
      * @param graphics The drawing context
-     * @param slot    The slot the heirloom is found in
+     * @param slot    The slot the item is found in
      * @param mouseX  The current mouse x position
      * @param mouseY  The current mouse y position
-     * @param ci      Whether the event should be canceled
+     * @param ci      Whether the event should be cancelled
      */
     @Inject(method = "extractSlot", at = @At("HEAD"))
     public void drawSlot(GuiGraphicsExtractor graphics, Slot slot, int mouseX, int mouseY, CallbackInfo ci) {
@@ -37,15 +38,18 @@ public class InventorySlotMixin extends Screen {
         if (stack.isEmpty()) return;
 
         // Check whether items should be highlighted
-        if (!SettingsConfig.HIGHLIGHT_ITEMS.get()) return;
+        if (SettingsConfig.HIGHLIGHT_ITEMS.get()) {
+
+            ItemType itemType = ItemType.from(stack);
+            if (itemType == null) return;
+
+            Color color = itemType.getColourGetter().get().get();
+            if (color == null || color.getAlpha() == 0) return;
+
+            graphics.fill(slot.x, slot.y, slot.x + 16, slot.y + 16, color.getRGB());
+        }
         
-        ItemType itemType = ItemType.from(stack);
-        if (itemType == null) return;
-
-        Color color = itemType.getColourGetter().get().get();
-        if (color == null) return;
-
-        graphics.fill(slot.x, slot.y, slot.x + 16, slot.y + 16, color.getRGB());
+        // TODO: Add other stuff, maybe enchant book cost rates
     }
 
 }
