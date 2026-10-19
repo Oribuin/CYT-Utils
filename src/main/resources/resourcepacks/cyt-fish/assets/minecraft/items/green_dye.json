@@ -1,0 +1,20 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "entries": [
+      {
+        "threshold": 9012,
+        "model": {
+          "model": "minecraft:item/fishing/crab_scale",
+          "type": "minecraft:model"
+        }
+      }
+    ],
+    "scale": 1,
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/green_dye"
+    }
+  }
+}

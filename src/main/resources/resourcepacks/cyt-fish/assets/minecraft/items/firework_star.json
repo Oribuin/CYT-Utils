@@ -1,0 +1,114 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "entries": [
+      {
+        "threshold": 9020,
+        "model": {
+          "model": "minecraft:item/fishing/augment/mystery_augment",
+          "type": "minecraft:model"
+        }
+      },
+      {
+        "threshold": 9021,
+        "model": {
+          "model": "minecraft:item/fishing/augment/callofthestorm",
+          "type": "minecraft:model"
+        }
+      },
+      {
+        "threshold": 9022,
+        "model": {
+          "model": "minecraft:item/fishing/augment/crabbait",
+          "type": "minecraft:model"
+        }
+      },
+      {
+        "threshold": 9023,
+        "model": {
+          "model": "minecraft:item/fishing/augment/hotspot",
+          "type": "minecraft:model"
+        }
+      },
+      {
+        "threshold": 9024,
+        "model": {
+          "model": "minecraft:item/fishing/augment/intellect",
+          "type": "minecraft:model"
+        }
+      },
+      {
+        "threshold": 9025,
+        "model": {
+          "model": "minecraft:item/fishing/augment/masterfisherman",
+          "type": "minecraft:model"
+        }
+      },
+      {
+        "threshold": 9026,
+        "model": {
+          "model": "minecraft:item/fishing/augment/perception",
+          "type": "minecraft:model"
+        }
+      },
+      {
+        "threshold": 9027,
+        "model": {
+          "model": "minecraft:item/fishing/augment/precisioncutting",
+          "type": "minecraft:model"
+        }
+      },
+      {
+        "threshold": 9028,
+        "model": {
+          "model": "minecraft:item/fishing/augment/sage",
+          "type": "minecraft:model"
+        }
+      },
+      {
+        "threshold": 9029,
+        "model": {
+          "model": "minecraft:item/fishing/augment/saturate",
+          "type": "minecraft:model"
+        }
+      },
+      {
+        "threshold": 9030,
+        "model": {
+          "model": "minecraft:item/fishing/augment/snowglobe",
+          "type": "minecraft:model"
+        }
+      },
+      {
+        "threshold": 9031,
+        "model": {
+          "model": "minecraft:item/fishing/augment/solarrage",
+          "type": "minecraft:model"
+        }
+      },
+      {
+        "threshold": 9033,
+        "model": {
+          "model": "minecraft:item/fishing/augment/trophy",
+          "type": "minecraft:model"
+        }
+      }
+    ],
+    "scale": 1,
+    "fallback": {
+      "type": "model",
+      "model": "item/firework_star",
+      "tints": [
+        {
+          "type": "constant",
+          "value": -1
+        },
+        {
+          "type": "firework",
+          "default": -7697782
+        }
+      ]
+    }
+  }
+}

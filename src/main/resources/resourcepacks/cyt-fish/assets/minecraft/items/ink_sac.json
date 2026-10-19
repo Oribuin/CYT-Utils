@@ -1,0 +1,20 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "entries": [
+      {
+        "threshold": 9014,
+        "model": {
+          "model": "minecraft:item/fishing/squid_tentacle",
+          "type": "minecraft:model"
+        }
+      }
+    ],
+    "scale": 1,
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/ink_sac"
+    }
+  }
+}

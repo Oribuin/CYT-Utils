@@ -1,0 +1,20 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "entries": [
+      {
+        "threshold": 9000,
+        "model": {
+          "model": "minecraft:item/fishing/fish/bronze_fish",
+          "type": "minecraft:model"
+        }
+      }
+    ],
+    "scale": 1,
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/cod"
+    }
+  }
+}

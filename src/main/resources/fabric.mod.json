@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "cyt-utils",
+  "version": "1.0.1",
+  "name": "CYT Utils",
+  "description": "A mod that adds client side QoL Features to CYT",
+  "authors": ["Oribuin"],
+  "environment": "client",
+  "accessWidener": "cyt-utils.accesswidener",
+  "entrypoints": {
+    "modmenu": [
+      "dev.oribuin.cytutils.config.ModMenuScreen"
+    ],
+    "client": [
+      "dev.oribuin.cytutils.CYTUtilsMod"
+    ]
+  },
+  "mixins": [
+    "cyt-utils.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": ">=26.1.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
