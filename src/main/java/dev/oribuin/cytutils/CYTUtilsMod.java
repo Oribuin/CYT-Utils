@@ -48,7 +48,7 @@ public class CYTUtilsMod implements ClientModInitializer, ConfigHolder {
                         asId("cyt-fish"),
                         container,
                         Component.literal("Legacy Fish Textures"),
-                        ALWAYS_ENABLED
+                        DEFAULT_ENABLED
                 );
             }
             
@@ -57,7 +57,7 @@ public class CYTUtilsMod implements ClientModInitializer, ConfigHolder {
                         asId("3d-heads"),
                         container,
                         Component.literal("3D Player Heads"),
-                        ALWAYS_ENABLED
+                        DEFAULT_ENABLED
                 );
             }
         });

@@ -26,5 +26,9 @@
   "setting.cyt-utils.relics-gems": "Gems Relic Highlight Colour",
   "setting.cyt-utils.relics-insect": "Insect Relic Highlight Colour",
   "setting.cyt-utils.relics-mango": "Mango Relic Highlight Colour",
-  "setting.cyt-utils.relics-ufo": "UFO Relic Highlight Colour"
+  "setting.cyt-utils.relics-ufo": "UFO Relic Highlight Colour",
+  "setting.cyt-utils.relics-lost-rune": "Lost Rune Relic Highlight Colour",
+  "setting.cyt-utils.relics-occult": "Occult Relic Highlight Colour",
+  "setting.cyt-utils.relics-sculk": "Sculk Relic Highlight Colour",
+  "setting.cyt-utils.relics-arcane": "Arcane Relic Highlight Colour"
 }

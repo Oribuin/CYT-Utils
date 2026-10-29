@@ -197,7 +197,7 @@ public final class SettingsConfig implements SettingHolder {
     
     
     public static final Setting<Color> RELICS_LOST_RUNE = create(SettingBuilder.of(
-                    "relics-lost-rune", Util.HEX_COLOR_CODEC, decode("#3f374a", 178)
+                    "relics-lost-rune", Util.HEX_COLOR_CODEC, decode("#45335e", 178)
             )
             .tab("client")
             .section("relics")
@@ -211,14 +211,14 @@ public final class SettingsConfig implements SettingHolder {
             .input(new ColorInput<>(true)));
     
     public static final Setting<Color> RELICS_OCCULT = create(SettingBuilder.of(
-                    "relics-occult", Util.HEX_COLOR_CODEC, decode("#b46088", 178)
+                    "relics-occult", Util.HEX_COLOR_CODEC, decode("#aa0022", 178)
             )
             .tab("client")
             .section("relics")
             .input(new ColorInput<>(true)));
     
     public static final Setting<Color> RELICS_SCULK = create(SettingBuilder.of(
-                    "relics-mango", Util.HEX_COLOR_CODEC, decode("#024050", 178)
+                    "relics-sculk", Util.HEX_COLOR_CODEC, decode("#024050", 178)
             )
             .tab("client")
             .section("relics")
