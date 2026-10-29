@@ -43,6 +43,10 @@ public enum ItemType {
     RELIC_INSECT(() -> SettingsConfig.RELICS_INSECT, "mango-relics:group", "Insect Relics"),
     RELIC_MANGO(() -> SettingsConfig.RELICS_MANGO, "mango-relics:group", "Mango Relics"),
     RELIC_UFO(() -> SettingsConfig.RELICS_UFO, "mango-relics:group", "UFO Relics"),
+    RELIC_LOST_RUNE(() -> SettingsConfig.RELICS_LOST_RUNE, "mango-relics:group", "Lost Rune Relics"),
+    RELIC_ARCANE(() -> SettingsConfig.RELICS_ARCANE, "mango-relics:group", "Arcane Relics"),
+    RELIC_OCCULT(() -> SettingsConfig.RELICS_OCCULT, "mango-relics:group", "Occult Relics"),
+    RELIC_SCULK(() -> SettingsConfig.RELICS_SCULK, "mango-relics:group", "Sculk Relics"),
     
 //    RELIC_DIRTY(, , ),
 //    RELIC_CLEAN(, , );

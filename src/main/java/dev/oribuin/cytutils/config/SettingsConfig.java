@@ -40,6 +40,13 @@ public final class SettingsConfig implements SettingHolder {
             .tab("client")
             .comment("You can always turn this off manually, This option will just add it to your resource packs automatically")
             .input(new CheckBoxInput<>()));
+    
+    public static final Setting<Boolean> REMOVE_WELCOME = create(SettingBuilder.of(
+                    "remove-welcome", Codec.BOOL, false
+            )
+            .tab("client")
+            .hidden(true)
+            .input(new CheckBoxInput<>()));
 
     // region Fish Colours
 
@@ -153,6 +160,13 @@ public final class SettingsConfig implements SettingHolder {
     // endregion
 
     // region Relics Section
+    public static final Setting<Color> RELICS_ARCANE = create(SettingBuilder.of(
+                    "relics-arcane", Util.HEX_COLOR_CODEC, decode("#6e5094", 178)
+            )
+            .tab("client")
+            .section("relics")
+            .input(new ColorInput<>(true)));
+    
     public static final Setting<Color> RELICS_EGYPTIAN = create(SettingBuilder.of(
                     "relics-egyptian", Util.HEX_COLOR_CODEC, decode("#ded664", 178)
             )
@@ -180,9 +194,31 @@ public final class SettingsConfig implements SettingHolder {
             .tab("client")
             .section("relics")
             .input(new ColorInput<>(true)));
+    
+    
+    public static final Setting<Color> RELICS_LOST_RUNE = create(SettingBuilder.of(
+                    "relics-lost-rune", Util.HEX_COLOR_CODEC, decode("#3f374a", 178)
+            )
+            .tab("client")
+            .section("relics")
+            .input(new ColorInput<>(true)));
 
     public static final Setting<Color> RELICS_MANGO = create(SettingBuilder.of(
                     "relics-mango", Util.HEX_COLOR_CODEC, decode("#e69757", 178)
+            )
+            .tab("client")
+            .section("relics")
+            .input(new ColorInput<>(true)));
+    
+    public static final Setting<Color> RELICS_OCCULT = create(SettingBuilder.of(
+                    "relics-occult", Util.HEX_COLOR_CODEC, decode("#b46088", 178)
+            )
+            .tab("client")
+            .section("relics")
+            .input(new ColorInput<>(true)));
+    
+    public static final Setting<Color> RELICS_SCULK = create(SettingBuilder.of(
+                    "relics-mango", Util.HEX_COLOR_CODEC, decode("#024050", 178)
             )
             .tab("client")
             .section("relics")

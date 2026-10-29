@@ -5,15 +5,20 @@ import me.lilac.camellia.config.Config;
 import me.lilac.camellia.config.ConfigHolder;
 import me.lilac.camellia.sync.ConfigSync;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.message.v1.ServerMessageEvents;
 import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
 import net.fabricmc.fabric.api.resource.v1.pack.PackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.network.chat.ChatType;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.PlayerChatMessage;
 import net.minecraft.resources.Identifier;
+import net.minecraft.server.level.ServerPlayer;
 
 import java.io.File;
 import java.io.IOException;
 
+import static net.fabricmc.fabric.api.resource.v1.pack.PackActivationType.ALWAYS_ENABLED;
 import static net.fabricmc.fabric.api.resource.v1.pack.PackActivationType.DEFAULT_ENABLED;
 import static net.fabricmc.fabric.api.resource.v1.pack.PackActivationType.NORMAL;
 
@@ -32,6 +37,10 @@ public class CYTUtilsMod implements ClientModInitializer, ConfigHolder {
         this.config = this.getOrCreateConfig();
         ConfigSync.init(SettingsConfig.INSTANCE); // Required to sync the config.
 
+        // Disable Chat "welcome" message
+//        ServerMessageEvents.GAME_MESSAGE.register((server, message, overlay) -> {
+//            if (message.)
+//        });
         FabricLoader.getInstance().getModContainer(MOD_ID).ifPresent(container -> {
             // Register Resource Packs
             if (SettingsConfig.LEGACY_FISH.get()) {
@@ -39,7 +48,7 @@ public class CYTUtilsMod implements ClientModInitializer, ConfigHolder {
                         asId("cyt-fish"),
                         container,
                         Component.literal("Legacy Fish Textures"),
-                        DEFAULT_ENABLED
+                        ALWAYS_ENABLED
                 );
             }
             
@@ -48,7 +57,7 @@ public class CYTUtilsMod implements ClientModInitializer, ConfigHolder {
                         asId("3d-heads"),
                         container,
                         Component.literal("3D Player Heads"),
-                        DEFAULT_ENABLED
+                        ALWAYS_ENABLED
                 );
             }
         });
